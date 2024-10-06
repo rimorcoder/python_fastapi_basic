@@ -1,6 +1,6 @@
-# Basic FastAPI - Ship API
+# Ship API
 
-This is a FastAPI-based basic API for managing and querying ship information. It provides endpoints for creating, reading, updating, and searching ship records.
+This is a FastAPI-based API for managing and querying ship information. It provides endpoints for creating, reading, updating, and searching ship records.
 
 ## Features
 
@@ -11,14 +11,17 @@ This is a FastAPI-based basic API for managing and querying ship information. It
 
 ## Prerequisites
 
-- Python 3.7+
+- Python 3.7+ (for local installation)
 - pip (Python package manager)
+- Docker (optional, for containerized deployment)
 
-## Installation
+## Installation and Running
+
+### Local Installation
 
 1. Clone the repository:
    ```
-   git clone https://github.com/rimorcoder/python_fastapi_basic.git
+   git clone https://github.com/your-username/ship-api.git
    cd ship-api
    ```
 
@@ -39,19 +42,62 @@ This is a FastAPI-based basic API for managing and querying ship information. It
 
 4. Install the required packages:
    ```
-   pip install -r requirements.txt
+   pip install fastapi[all] pydantic
    ```
 
-## Running the Application
-
-1. Make sure you're in the project directory and your virtual environment is activated.
-
-2. Start the FastAPI server:
+5. Start the FastAPI server:
    ```
    uvicorn main:app --reload
    ```
 
    The API will be available at `http://127.0.0.1:8000`.
+
+### Docker Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/rimorcoder/python_fastapi_basic.git
+   cd ship-api
+   ```
+
+2. Build the Docker image:
+   ```
+   docker build -t ship-api .
+   ```
+
+### Docker Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/your-username/ship-api.git
+   cd ship-api
+   ```
+
+2. Build the Docker image:
+   ```
+   docker build -t ship-api .
+   ```
+
+3. Run the Docker container:
+   ```
+   docker run -d --restart no -p 8000:8000 --name ship-api-container ship-api
+   ```
+
+   The API will be available at `http://localhost:8000`.
+
+4. To stop the container:
+   ```
+   docker stop ship-api-container
+   ```
+
+5. To start the container again:
+   ```
+   docker start ship-api-container
+   ```
+
+Note: The `--restart no` flag in the `docker run` command ensures that the container does not automatically start when Docker Desktop launches. You'll need to manually start the container using the `docker start` command when you want to use the API.
+
+   The API will be available at `http://localhost:8000`.
 
 ## Usage
 
