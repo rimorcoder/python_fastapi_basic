@@ -42,7 +42,7 @@ This is a FastAPI-based API for managing and querying ship information. It provi
 
 4. Install the required packages:
    ```
-   pip install fastapi[all] pydantic
+   pip install -r requirements.txt
    ```
 
 5. Start the FastAPI server:
