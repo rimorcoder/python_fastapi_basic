@@ -11,7 +11,7 @@ This is a FastAPI-based API for managing and querying ship information. It provi
 
 ## Prerequisites
 
-- Python 3.7+ (for local installation)
+- Python 3.12+ (for local installation)
 - pip (Python package manager)
 - Docker (optional, for containerized deployment)
 
